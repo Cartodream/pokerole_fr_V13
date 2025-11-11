@@ -1,0 +1,159 @@
+.stat-changes {
+  display: flex;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  justify-content: space-between;
+
+  .stat-change-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+
+    background-color: black;
+    border-radius: 14px;
+    padding: 5px;
+    gap: 2px;
+
+    label {
+      color: white;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    label, input {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .icon-and-value {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 14px;
+      flex: 1;
+      padding: 0 6px;
+
+      i {
+        font-size: 1.5rem;
+        width: 0;
+      }
+    }
+
+    &.editing .icon-and-value i {
+      display: none;
+    }
+
+    input, select {
+      color: black;
+      height: 30px;
+      border: none;
+      background-color: transparent;
+      flex: 1;
+    }
+
+    input {
+      font-weight: bold;
+      font-size: 2rem;
+      text-align: right;
+    }
+
+    select {
+      font-size: 1.2rem;
+      font-weight: normal;
+      width: 100%;
+    }
+  }
+
+  .stat-change-item.positive {
+    background-color: #0095db;
+
+    .icon-and-value i {
+      color: #2a5b7b;
+    }
+
+    input {
+      color: #0095db;
+    }
+  }
+
+  .stat-change-item.negative {
+    background-color: #e41b13;
+
+    .icon-and-value i {
+      color: #e84124;
+    }
+
+    input {
+      color: #e41b13;
+    }
+  }
+
+  .stat-change-item.pain {
+    width: 130px;
+    max-width: 220px;
+    flex: 1;
+    align-items: stretch;
+    background-color: #A74D39;
+  }
+}
+
+.effects-list {
+  h3 {
+    border: none;
+  }
+
+  .item {
+    .ailment-duration,
+    .ailment-controls {
+      text-align: center;
+      border-left: 1px solid #c9c7b8;
+      border-right: 1px solid #c9c7b8;
+      font-size: 12px;
+    }
+  
+    .ailment-controls {
+      border: none;
+    }
+
+    .item-image {
+      border-radius: 6px;
+
+      img {
+        border: none;
+      }
+    }
+  }
+
+  .quick-ailment-list {
+    display: flex;
+    gap: 4px;
+    align-items: stretch;
+    justify-content: flex-end;
+    margin: 0 5px;
+    
+    .add-ailment, .disabled-elem {
+      width: 18px;
+      height: 18px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border: none;
+
+      filter: brightness(40%);
+    }
+
+    .add-ailment img {
+      // Make the icons dark to match the text
+      filter: brightness(10%);
+
+      &:hover {
+        filter: brightness(10%) drop-shadow(0 0 8px var(--color-shadow-primary));
+      }
+    }
+  }
+}
