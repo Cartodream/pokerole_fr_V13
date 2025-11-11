@@ -1,0 +1,71 @@
+/* Pokérole System CSS - Minimal version for V13 compatibility */
+
+.pokerole {
+  font-family: "Signika", sans-serif;
+}
+
+.pokerole .action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.pokerole .action-buttons button {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.pokerole .action-buttons button:hover {
+  background: #e0e0e0;
+}
+
+.chat-action {
+  font-size: 0.8rem;
+}
+
+.combat-action-counter,
+.combat-clash,
+.combat-evade {
+  display: inline-block;
+  margin-right: 0.25rem;
+  padding: 0.1rem 0.3rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  font-size: 0.7rem;
+}
+
+.combat-clash.active,
+.combat-evade.active {
+  background: rgba(0, 128, 0, 0.3);
+}
+
+.dice-tooltip .dice-rolls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.dice-tooltip .dice-rolls .roll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #f9f9f9;
+  font-weight: bold;
+}
+
+.dice-tooltip .dice-rolls .roll.max {
+  background: #4CAF50;
+  color: white;
+  border-color: #45a049;
+}
